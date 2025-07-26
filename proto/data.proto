@@ -1,0 +1,21 @@
+syntax = "proto3";
+package data;
+
+service DataService {
+  rpc SaveData (SaveDataRequest) returns (SaveDataResponse);
+  rpc GetData (GetDataRequest) returns (GetDataResponse);
+}
+
+message SaveDataRequest {
+  string data = 1;
+}
+
+message SaveDataResponse {
+  bool success = 1;
+}
+
+message GetDataRequest {}
+
+message GetDataResponse {
+  string data = 1;
+}
